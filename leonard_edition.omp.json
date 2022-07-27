@@ -1,8 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  /*
-  Base on: powerlevel10k_rainbow, clean-detailed
-  */
   "blocks": [
     {
       "alignment": "left",
@@ -10,10 +7,9 @@
         {
           "background": "#17D7A0",
           "foreground": "#011627",
-          "leading_diamond": "\ue0b2",
-          "template": "{{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }}",
-          "trailing_diamond": "<transparent,background>\ue0b2</>",
           "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "template": "{{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }} ",
           "type": "session"
         },
         {
@@ -25,29 +21,27 @@
             "{{ if gt .Behind 0 }}#4e9a06{{ end }}"
           ],
           "foreground": "#000000",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
           "properties": {
             "branch_icon": "\uf126 ",
             "fetch_stash_count": true,
             "fetch_status": true,
-            "fetch_upstream_icon": true,
-            "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} "
+            "fetch_upstream_icon": true
           },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent,background>\ue0b2</>",
-          "style": "diamond",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
         },
         {
           "background": "#575656",
           "foreground": "#d6deeb",
-          "leading_diamond": "\ue0b2",
           "properties": {
             "style": "roundrock",
             "threshold": 0
           },
-          "template": " {{ .FormattedMs }}",
-          "trailing_diamond": "\ue0b0",
           "style": "diamond",
+          "template": " {{ .FormattedMs }}",
+          "trailing_diamond": "\ue0b4",
           "type": "executiontime"
         }
       ],
@@ -59,10 +53,8 @@
       "segments": [
         {
           "leading_diamond": "\u256d\u2500\ue0b2",
-          "properties": {
-            "template": "\u256d\u2500 {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
-          },
           "style": "plain",
+          "template": "\u256d\u2500 {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
         },
         {
@@ -73,10 +65,10 @@
         {
           "properties": {
             "home_icon": "~",
-            "style": "folder",
-            "template": "| \uf07c {{ .Path }} "
+            "style": "folder"
           },
           "style": "plain",
+          "template": "| \uf07c {{ .Path }} ",
           "type": "path"
         }
       ],
@@ -91,10 +83,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "fetch_version": true,
-            "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 "
+            "fetch_version": true
           },
           "style": "powerline",
+          "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 ",
           "type": "node"
         },
         {
@@ -103,10 +95,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "fetch_version": true,
-            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 "
+            "fetch_version": true
           },
           "style": "powerline",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 ",
           "type": "go"
         },
         {
@@ -115,10 +107,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "fetch_version": true,
-            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue624 "
+            "fetch_version": true
           },
           "style": "powerline",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue624 ",
           "type": "julia"
         },
         {
@@ -127,10 +119,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "display_mode": "context",
-            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Major }}.{{ .Minor }}{{ end }} \ue235 "
+            "display_mode": "context"
           },
           "style": "powerline",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Major }}.{{ .Minor }}{{ end }} \ue235 ",
           "type": "python"
         },
         {
@@ -140,10 +132,10 @@
           "powerline_symbol": "\ue0b2",
           "properties": {
             "display_mode": "files",
-            "fetch_version": true,
-            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 "
+            "fetch_version": true
           },
           "style": "powerline",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
           "type": "ruby"
         },
         {
@@ -153,10 +145,10 @@
           "powerline_symbol": "\ue0b2",
           "properties": {
             "display_mode": "files",
-            "fetch_version": false,
-            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \uf0e7"
+            "fetch_version": false
           },
           "style": "powerline",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \uf0e7",
           "type": "azfunc"
         },
         {
@@ -168,10 +160,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "display_default": false,
-            "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad "
+            "display_default": false
           },
           "style": "powerline",
+          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
           "type": "aws"
         },
         {
@@ -179,10 +171,8 @@
           "foreground": "#111111",
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
-          "properties": {
-            "template": " \uf0ad "
-          },
           "style": "powerline",
+          "template": " \uf0ad ",
           "type": "root"
         },
         {
@@ -194,10 +184,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "always_enabled": true,
-            "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} "
+            "always_enabled": true
           },
           "style": "powerline",
+          "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
           "type": "exit"
         },
         {
@@ -205,10 +195,10 @@
           "foreground": "#000000",
           "invert_powerline": true,
           "properties": {
-            "time_format": "15:04",
-            "template": " {{ .CurrentDate | date .Format }} \uf017 "
+            "time_format": "15:04"
           },
           "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} \uf017 ",
           "trailing_diamond": "\ue0b0\u2500\u256e",
           "type": "time"
         }
@@ -221,10 +211,8 @@
       "segments": [
         {
           "foreground": "#d3d7cf",
-          "properties": {
-            "template": "\u2570\u2500"
-          },
           "style": "plain",
+          "template": "\u2570\u2500",
           "type": "text"
         }
       ],
@@ -234,10 +222,8 @@
       "segments": [
         {
           "foreground": "#d3d7cf",
-          "properties": {
-            "template": "\u2500\u256f"
-          },
           "style": "plain",
+          "template": "\u2500\u256f",
           "type": "text"
         }
       ],
@@ -246,5 +232,5 @@
   ],
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
   "final_space": true,
-  "version": 1
+  "version": 2
 }
