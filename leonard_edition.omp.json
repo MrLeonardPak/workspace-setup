@@ -58,11 +58,6 @@
           "type": "os"
         },
         {
-          "style": "plain",
-          "template": " \uf292 ",
-          "type": "root"
-        },
-        {
           "properties": {
             "home_icon": "~",
             "style": "folder"
@@ -70,6 +65,11 @@
           "style": "plain",
           "template": "| \uf07c {{ .Path }} ",
           "type": "path"
+        },
+        {
+          "style": "plain",
+          "template": " \uf292 ",
+          "type": "root"
         }
       ],
       "type": "prompt"
