@@ -2,6 +2,12 @@
 
 > Clone to ***/*** 
 
+## For host
 ```bash
-echo -e ". /my-worspace/.x-server\n. /my-workspace/.my-bash" >> ~/.bashrc
+/my-workspace/setup-host.sh
+```
+
+## For docker
+```bash
+/my-workspace/setup-docker.sh
 ```
