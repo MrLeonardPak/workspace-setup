@@ -11,3 +11,8 @@
 ```bash
 /my-workspace/setup-docker.sh
 ```
+
+## For git HTTPS tocken
+```bash
+git config --global url.”https://{token}:@github.com/".insteadOf “https://github.com/"
+```
