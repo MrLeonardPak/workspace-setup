@@ -14,5 +14,5 @@
 
 ## For git HTTPS tocken
 ```bash
-git config --global url.”https://{token}:@github.com/".insteadOf “https://github.com/"
+git config --global url."https://{token}:@github.com/".insteadOf "https://github.com/"
 ```
