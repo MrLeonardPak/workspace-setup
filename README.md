@@ -1,18 +1,19 @@
 # My workspaces
 
-> Clone to ***/*** 
+> Clone to ***$HOME*** 
 
-## For host
+## For WSL
 ```bash
-/my-workspace/setup-host.sh
+sudo setup-bash.bash
+echo ". $HOME/workspace-setup/x-server.bash" >> $HOME/.bashrc
 ```
 
-## For docker
-```bash
-/my-workspace/setup-docker.sh
+## For Docker
+```docker
+RUN /my-workspace/setup-docker.sh
 ```
 
-## For git HTTPS tocken
+## For git HTTPS token
 ```bash
-git config --global url."https://{token}:@github.com/".insteadOf "https://github.com/"
+git config --global url."https://{TOKEN}:@github.com/".insteadOf "https://github.com/"
 ```
