@@ -10,7 +10,8 @@ echo ". $HOME/workspace-setup/x-server.bash" >> $HOME/.bashrc
 
 ## For Docker
 ```docker
-RUN /my-workspace/setup-docker.sh
+RUN git clone https://github.com/MrLeonardPak/workspace-setup.git $HOME/workspace-setup
+RUN $HOME/workspace-setup/setup-docker.bash
 ```
 
 ## For git HTTPS token
