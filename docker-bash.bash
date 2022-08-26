@@ -6,3 +6,8 @@ if ! shopt -oq posix; then
    . /etc/bash_completion
  fi
 fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
