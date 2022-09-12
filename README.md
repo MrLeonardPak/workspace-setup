@@ -4,7 +4,7 @@
 
 ## For WSL
 ```bash
-sudo setup-bash.bash
+sudo ./setup-bash.bash
 echo ". $HOME/workspace-setup/x-server.bash" >> $HOME/.bashrc
 ```
 
