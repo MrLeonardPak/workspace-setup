@@ -5,6 +5,7 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gs='git status -s'
 alias gl='git log --pretty=format:"%C(yellow)%h %ad %C(red)| %C(white)%s%C(auto)%d %C(blue)[%an]" --graph --date=short'
+alias gd='git diff'
 
 # Bash settings
 export HISTCONTROL=ignoredups
