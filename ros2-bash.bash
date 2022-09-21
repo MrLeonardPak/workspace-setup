@@ -3,3 +3,4 @@
 
 # ROS alias
 alias colconbuild='f(){ rm -rf artifact && colcon build --build-base artifact/build --install-base artifact/install "$@" && . artifact/install/setup.bash; unset -f f; }; f'
+alias ros2pkgsetup='apt update && rosdep install -i --from-path src --rosdistro $ROS_DISTRO -y'
