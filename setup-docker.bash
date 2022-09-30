@@ -1,3 +1,3 @@
-. $HOME/workspace-setup/setup-bash.bash
+. $WORKSPACE_USER/workspace-setup/setup-bash.bash
 
-echo ". $HOME/workspace-setup/docker-bash.bash" >> $HOME/.bashrc
+echo ". $WORKSPACE_USER/workspace-setup/docker-bash.bash" >> $WORKSPACE_USER/.bashrc
