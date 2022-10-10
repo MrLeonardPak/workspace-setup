@@ -3,9 +3,14 @@
 > Clone to ***$HOME*** 
 
 ## For WSL
+- Go to [oh-my-posh](https://ohmyposh.dev/docs/installation/linux)
+- Run
 ```bash
-sudo ./setup-bash.bash
-echo ". $HOME/workspace-setup/x-server.bash" >> $HOME/.bashrc
+echo ". ~/workspace-setup/my-bash.bash" >> ~/.bashrc
+```
+- if win 10 with X-Server
+```bash
+echo ". ~/workspace-setup/x-server.bash" >> ~/.bashrc
 ```
 
 ## For Docker
