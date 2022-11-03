@@ -3,6 +3,13 @@
 > Clone to ***$HOME*** 
 
 ## For WSL
+- Add new user
+```bash
+adduser new-user
+usermod -a -G adm,dialout,cdrom,floppy,sudo,audio,dip,video,plugdev,netdev new-user
+echo -e "[user]\ndefault=new-user" >> /etc/wsl.conf
+passwd root
+```
 - Go to [oh-my-posh](https://ohmyposh.dev/docs/installation/linux)
 - Run
 ```bash
