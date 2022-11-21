@@ -19,6 +19,10 @@ echo ". ~/workspace-setup/my-bash.bash" >> ~/.bashrc
 ```bash
 echo ". ~/workspace-setup/x-server.bash" >> ~/.bashrc
 ```
+- for ROS
+```bash
+echo ". ~/workspace-setup/ros2-bash.bash" >> ~/.bashrc
+```
 
 ## For Docker
 ```docker
