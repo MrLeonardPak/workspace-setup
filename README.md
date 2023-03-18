@@ -15,6 +15,10 @@ passwd root
 ```bash
 echo ". ~/workspace-setup/my-bash.bash" >> ~/.bashrc
 ```
+- if Jetson Nano
+```bash
+echo ". ~/workspace-setup/jetson-bash.bash" >> ~/.bashrc
+```
 - if win 10 with X-Server
 ```bash
 echo ". ~/workspace-setup/x-server.bash" >> ~/.bashrc
