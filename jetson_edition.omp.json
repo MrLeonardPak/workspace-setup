@@ -41,7 +41,7 @@
             "shell": "bash",
             "command": "bash ${HOME}/workspace-setup/jetson-temp.bash"
           },
-          "template": " {{ .Output }} ",
+          "template": " \ue266 {{ .Output }}°C ",
 	  "type": "command"
         },
         {

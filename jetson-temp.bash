@@ -1,9 +1,7 @@
 #!/bin/bash
 
-CPU_temp=$(cat /sys/class/thermal/thermal_zone1/temp)
-GPU_temp=$(cat /sys/class/thermal/thermal_zone2/temp)
+AO_temp=$(cat /sys/devices/virtual/thermal/thermal_zone0/temp)
 
-cpu=$((CPU_temp/1000))
-gpu=$((GPU_temp/1000))
+ao=$((AO_temp/1000))
 
-echo "CPU $cpu°C | GPU $gpu°C"
+echo "$ao"
