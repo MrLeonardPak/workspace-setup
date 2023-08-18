@@ -16,4 +16,4 @@ shopt -s globstar
 
 # Change prompt
 eval "$(oh-my-posh prompt init bash)"
-eval "$(oh-my-posh --init --shell bash --config $HOME/workspace-setup/config/jetson_edition.omp.json)"
+eval "$(oh-my-posh --init --shell bash --config $HOME/workspace-setup/configs/jetson_edition.omp.json)"
