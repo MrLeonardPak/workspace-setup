@@ -42,3 +42,26 @@ RUN $HOME/workspace-setup/setup-docker.bash
 ```bash
 git config --global url."https://{TOKEN}:@github.com/".insteadOf "https://github.com/"
 ```
+## Config powershell
+1. Config terminal like [this](https://youtu.be/5-aK2_WwrmM?si=2iyxmNNTKgyqiCas) before installing part `05:43`
+1. Install [scoop](https://scoop.sh/#/)
+1. Install tools
+    ```powershell
+    scoop install sudo curl neovim fzf
+    winget install -e --id Git.Git
+    ```
+1. Install [oh-my-posh](https://ohmyposh.dev/docs/installation/windows). Used msstore source for autoupdate
+    ```powershell
+    winget install oh-my-posh -s msstore
+    ```
+1. Install modules
+    ```powershell
+    Install-Module -Name posh-git -Scope CurrentUser -Force
+    Install-Module -Name Terminal-Icons -Scope CurrentUser -Repository PSGallery -Force
+    Install-Module -Name z -Scope CurrentUser -Force
+    Install-Module -Name PSFzf -Scope CurrentUser -Force
+    ```
+2. Add profile file to autorun
+    ```powershell
+    echo ". $env:USERPROFILE\workspace-setup\powershell\user-profile.ps1" >> $PROFILE.CurrentUserCurrentHost
+    ```
