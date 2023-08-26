@@ -1,11 +1,13 @@
 oh-my-posh init pwsh --config $env:USERPROFILE\workspace-setup\configs\leonard_edition.omp.json | Invoke-Expression
 Import-Module posh-git
 Import-Module -Name Terminal-Icons
-# Modules setup
+# PSReadLine
 # Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -PredictionSource History
 # Set-PSReadLineKeyHandler -Key Tab -Function Complete
+Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+# PSFzf
+Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 # Alias
 Set-Alias vim nvim
