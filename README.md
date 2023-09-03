@@ -14,6 +14,16 @@
     ```bash
     curl -s https://ohmyposh.dev/install.sh | bash -s
     ```
+1. Install [exa](https://the.exa.website/)
+1. Install [fzf](https://github.com/junegunn/fzf#using-linux-package-managers) with git
+    ```bash
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+    ```
+1. Download [z](https://github.com/rupa/z)
+    ```bash
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ```
 1. Add to `.bashrc`
     1. Normal CLI
         ```bash

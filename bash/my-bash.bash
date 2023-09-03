@@ -14,6 +14,17 @@ shopt -s cdspell
 shopt -s dirspell
 shopt -s globstar
 
+# Exa
+alias ls="exa -l --no-user --no-filesize --no-permissions --no-time --icons"
+alias ll="exa -l -a --icons"
+alias lt="exa -T --icons"
+
+# Fzf
+export FZF_COMPLETION_TRIGGER=''
+
+# Z
+. ~/z/z.sh
+
 # Change prompt
 eval "$(oh-my-posh prompt init bash)"
 eval "$(oh-my-posh --init --shell bash --config $HOME/workspace-setup/configs/leonard_edition.omp.json)"
