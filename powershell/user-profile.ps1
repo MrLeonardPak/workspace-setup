@@ -2,13 +2,10 @@ oh-my-posh init pwsh --config $env:USERPROFILE\workspace-setup\configs\leonard_e
 Import-Module posh-git
 Import-Module -Name Terminal-Icons
 # PSReadLine
-# Set-PSReadLineOption -PredictionViewStyle ListView
-# Set-PSReadLineKeyHandler -Key Tab -Function Complete
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 # PSFzf
 Import-Module PSFzf
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 # Alias
 Set-Alias vim nvim
 Set-Alias ll ls
