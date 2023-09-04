@@ -78,6 +78,21 @@
       "alignment": "right",
       "segments": [
         {
+          "background": "#000000",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#cc2222{{ end }}"
+          ],
+          "foreground": "#d3d7cf",
+          "invert_powerline": true,
+          "powerline_symbol": "\ue0b6",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "powerline",
+          "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
+          "type": "exit"
+        },
+        {
           "background": "#689f63",
           "foreground": "#ffffff",
           "invert_powerline": true,
@@ -176,21 +191,6 @@
           "type": "root"
         },
         {
-          "background": "#000000",
-          "background_templates": [
-            "{{ if gt .Code 0 }}#cc2222{{ end }}"
-          ],
-          "foreground": "#d3d7cf",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "powerline",
-          "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
-          "type": "exit"
-        },
-        {
           "background": "#d3d7cf",
           "foreground": "#000000",
           "invert_powerline": true,
@@ -199,7 +199,7 @@
           },
           "style": "diamond",
           "template": " {{ .CurrentDate | date .Format }} \uf017 ",
-          "trailing_diamond": "\ue0b0\u2500\u256e",
+          "trailing_diamond": "\ue0b4",
           "type": "time"
         }
       ],
@@ -212,22 +212,11 @@
         {
           "foreground": "#d3d7cf",
           "style": "plain",
-          "template": "\u2570\u2500",
+          "template": "\u2570\u2500\u276f",
           "type": "text"
         }
       ],
       "type": "prompt"
-    },
-    {
-      "segments": [
-        {
-          "foreground": "#d3d7cf",
-          "style": "plain",
-          "template": "\u2500\u256f",
-          "type": "text"
-        }
-      ],
-      "type": "rprompt"
     }
   ],
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
