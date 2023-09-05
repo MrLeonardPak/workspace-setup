@@ -75,3 +75,19 @@ git config --global url."https://{TOKEN}:@github.com/".insteadOf "https://github
     ```powershell
     echo ". $env:USERPROFILE\workspace-setup\powershell\user-profile.ps1" >> $PROFILE.CurrentUserCurrentHost
     ```
+
+## Config fish
+1. Install [oh-my-posh](https://ohmyposh.dev/docs/installation/linux)
+    ```shell
+    curl -s https://ohmyposh.dev/install.sh | bash -s
+    ```
+1. Install [fish](https://fishshell.com/)
+1. Change default shell
+    ```shell
+    chsh -s /usr/bin/fish
+    ```
+1. Install [exa](https://the.exa.website/)
+1. Add to `config.fish`
+    ```bash
+    echo ". ~/workspace-setup/fish/my-fish.fish" >> ~/.config/fish/config.fish
+    ```
