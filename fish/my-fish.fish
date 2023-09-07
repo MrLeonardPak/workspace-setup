@@ -17,7 +17,12 @@ if status is-interactive
   alias lt="exa -T --icons"
 
   # Add local bin
-  set -a PATH $HOME/.local/bin
+  if not contains $HOME/.local/bin $PATH
+    set -a PATH $HOME/.local/bin
+  end
+
+  # Fzf.fish
+  fzf_configure_bindings --directory=\cf
 
   oh-my-posh init fish --config ~/workspace-setup/configs/leonard_edition.omp.json | source
 end

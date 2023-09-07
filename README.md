@@ -82,15 +82,15 @@ git config --global url."https://{TOKEN}:@github.com/".insteadOf "https://github
     curl -s https://ohmyposh.dev/install.sh | bash -s
     ```
 1. Install [fish](https://fishshell.com/)
-1. Change default shell
+1. Change default shell (need `util-linux-user`)
     ```shell
     chsh -s /usr/bin/fish
     ```
-1. Install [exa](https://the.exa.website/)
 1. Add to `config.fish`
     ```bash
     echo ". ~/workspace-setup/fish/my-fish.fish" >> ~/.config/fish/config.fish
     ```
+1. Install [exa](https://the.exa.website/)
 1. Install [fisher](https://github.com/jorgebucaran/fisher)
     ```shell
     curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
