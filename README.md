@@ -22,7 +22,7 @@
     ```
 1. Download [z](https://github.com/rupa/z)
     ```bash
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    git clone https://github.com/rupa/z.git
     ```
 1. Add to `.bashrc`
     1. Normal CLI
@@ -87,6 +87,15 @@ git config --global url."https://{TOKEN}:@github.com/".insteadOf "https://github
     chsh -s /usr/bin/fish
     ```
 1. Install [exa](https://the.exa.website/)
+1. Install [fisher](https://github.com/jorgebucaran/fisher)
+    ```shell
+    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+    ```
+1. Install [z for fish](https://github.com/jethrokuan/z)
+    ```shell
+    fisher install jethrokuan/z
+    ```
+1. Install [fzf for fish](https://github.com/PatrickF1/fzf.fish)
 1. Add to `config.fish`
     ```bash
     echo ". ~/workspace-setup/fish/my-fish.fish" >> ~/.config/fish/config.fish
