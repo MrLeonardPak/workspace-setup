@@ -87,6 +87,10 @@ git config --global url."https://{TOKEN}:@github.com/".insteadOf "https://github
     chsh -s /usr/bin/fish
     ```
 1. Install [exa](https://the.exa.website/)
+1. Add to `config.fish`
+    ```bash
+    echo ". ~/workspace-setup/fish/my-fish.fish" >> ~/.config/fish/config.fish
+    ```
 1. Install [fisher](https://github.com/jorgebucaran/fisher)
     ```shell
     curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
@@ -96,7 +100,3 @@ git config --global url."https://{TOKEN}:@github.com/".insteadOf "https://github
     fisher install jethrokuan/z
     ```
 1. Install [fzf for fish](https://github.com/PatrickF1/fzf.fish)
-1. Add to `config.fish`
-    ```bash
-    echo ". ~/workspace-setup/fish/my-fish.fish" >> ~/.config/fish/config.fish
-    ```

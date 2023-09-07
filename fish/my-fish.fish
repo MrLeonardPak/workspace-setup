@@ -16,7 +16,7 @@ if status is-interactive
   alias ll="exa -l -a --icons"
   alias lt="exa -T --icons"
 
-  # fd
+  # Add local bin
   set -a PATH $HOME/.local/bin
 
   oh-my-posh init fish --config ~/workspace-setup/configs/leonard_edition.omp.json | source
