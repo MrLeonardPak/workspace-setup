@@ -7,6 +7,7 @@ Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 # PSFzf
 Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+Set-PSReadLineKeyHandler -Chord 'Ctrl+Alt+s' -ScriptBlock { Invoke-FuzzyGitStatus }
 # Alias
 Set-Alias vim nvim
 Set-Alias ll ls
