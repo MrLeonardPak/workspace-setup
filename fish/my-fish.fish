@@ -22,7 +22,6 @@ if status is-interactive
   end
 
   # Fzf.fish
-  fzf_configure_bindings --directory=\cf
-
   oh-my-posh init fish --config ~/workspace-setup/configs/leonard_edition.omp.json | source
+  fzf_configure_bindings --history=\cr --directory=\cf --variables=\e\cv
 end
