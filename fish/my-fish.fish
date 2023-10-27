@@ -4,13 +4,19 @@ if status is-interactive
   function recmake
     cd ../ && find build/* -maxdepth 0 ! -path 'build/_deps' -exec rm -rf {} \; && cd build && cmake $argv ..
   end
+  function v
+    nvim $argv
+  end
+  function vim
+    nvim $argv
+  end
 
   alias ga='git add'
   alias gc='git commit -m'
   alias gs='git status -s'
   alias gl='git log --pretty=format:"%C(yellow)%h %ad %C(red)| %C(white)%s%C(auto)%d %C(blue)[%an]" --graph --date=short'
   alias gd='git diff'
-
+  
   # Exa
   alias ls="exa -l --no-user --no-filesize --no-permissions --no-time --icons"
   alias ll="exa -l -a --icons"
