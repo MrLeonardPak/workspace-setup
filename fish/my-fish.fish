@@ -16,7 +16,7 @@ if status is-interactive
   alias gs='git status -s'
   alias gl='git log --pretty=format:"%C(yellow)%h %ad %C(red)| %C(white)%s%C(auto)%d %C(blue)[%an]" --graph --date=short'
   alias gd='git diff'
-  
+
   # Exa
   alias ls="exa -l --no-user --no-filesize --no-permissions --no-time --icons"
   alias ll="exa -l -a --icons"
@@ -28,6 +28,6 @@ if status is-interactive
   end
 
   # Fzf.fish
-  oh-my-posh init fish --config ~/workspace-setup/configs/leonard_edition.omp.json | source
+  oh-my-posh init fish --config ~/workspace-setup/configs/leonard_edition.omp.yaml | source
   fzf_configure_bindings --history=\cr --directory=\cf --variables=\e\cv
 end
