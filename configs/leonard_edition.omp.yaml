@@ -61,6 +61,16 @@ blocks:
         style: plain
         foreground: "#00acd7"
         template: "\ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+      - type: cmake
+        style: plain
+        foreground: "#25691b"
+        template: "\ue61e \ue61d {{ .Full }} "
+      - type: python
+        style: plain
+        foreground: "#FFDE57"
+        template: "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Major }}.{{ .Minor }}{{ end }} "
+        properties:
+          display_mode: context
       - type: executiontime
         style: plain
         foreground: p:gray
