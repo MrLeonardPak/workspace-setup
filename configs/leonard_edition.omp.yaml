@@ -29,7 +29,7 @@ blocks:
         template: "{{ if .SSHSession }}\ueba9 {{ end }}@{{ .UserName }} "
       - type: path
         style: plain
-        foreground: p:white
+        foreground: p:blue
         template: "{{ .Path }} "
         properties:
           style: letter
@@ -56,11 +56,15 @@ blocks:
       - type: node
         style: plain
         foreground: "#689f63"
-        template: "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
+        template: "\ue718 {{
+          if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{
+          .Full }} "
       - type: go
         style: plain
         foreground: "#00acd7"
-        template: "\ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+        template: "\ue627 {{
+          if .Error }}{{ .Error }}{{
+          else }}{{ .Full }}{{ end }} "
       - type: cmake
         style: plain
         foreground: "#25691b"
@@ -68,7 +72,11 @@ blocks:
       - type: python
         style: plain
         foreground: "#FFDE57"
-        template: "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Major }}.{{ .Minor }}{{ end }} "
+        template: "\ue235 {{
+          if .Error }}{{ .Error }}{{
+          else }}{{
+          if .Venv }}{{ .Venv }} {{ end }}{{
+          .Major }}.{{ .Minor }}{{ end }} "
         properties:
           display_mode: context
       - type: executiontime
