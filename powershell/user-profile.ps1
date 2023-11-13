@@ -1,4 +1,4 @@
-oh-my-posh init pwsh --config $env:USERPROFILE\workspace-setup\configs\leonard_edition.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config $env:USERPROFILE\workspace-setup\configs\leonard_edition.omp.yaml | Invoke-Expression
 Import-Module posh-git
 Import-Module -Name Terminal-Icons
 # PSReadLine
