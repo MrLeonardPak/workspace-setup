@@ -16,6 +16,7 @@ if status is-interactive
   alias gs='git status -s'
   alias gl='git log --pretty=format:"%C(yellow)%h %ad %C(red)| %C(white)%s%C(auto)%d %C(blue)[%an]" --graph --date=short'
   alias gd='git diff'
+  alias gac='git add . && git commit -m'
 
   # Exa
   alias ls="exa -l --no-user --no-filesize --no-permissions --no-time --icons"
